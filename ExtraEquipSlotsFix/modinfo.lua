@@ -1,17 +1,10 @@
 local isCh = locale == "zh" or locale == "zhr"--是否为中文
-name = isCh and "四/五/六格装备栏（留言适配模组）" or "Extra Equip Slots+1/2/3 (Tell me what you want)"
+name = isCh and "四/五/六格装备栏 个人修复版" or "Extra Equip Slots+1/2/3 self fix"
 description = isCh and [[四/五/六格装备栏 适配了拳击袋，修复了虚空长袍，亮茄甲，荆棘茄甲修复之后变成背包槽位的版本]] 
 or 
-[[！！！My English is not good, maybe there is a wrong description！！！
-Equipment with backpack function needs to use separate layout to display normally
-If you need compatible equipment special effects, please "Enabled" the MOD Armor Special Effect Repair in the settings, and turn the Armor Slot to "OFF"
-    
-Mod introduction:
-Added separate equip slots for armor, clothing and amulets. The default is fully open, you can adjust the position by yourself, and add it directly to the backpack grid and head equipment in sequence. By default armor, clothes, amulets are assigned to slots 1, 2, 3, if any slot is unchecked or turned off, that slot will be disabled in game
-    
-PS: You can leave a message to adapt the content of other mods. Please try it first and then reply. After replying, please subscribe to this mod or subscribe to the notification in the comment area, otherwise you will not receive reminders. My ability is limited, so add it as appropriate]]
+[[ Personalized customization，Original mod: 2950481491]]
 author = "[Geraint小白、冷逸修、凛子不是林子、xingmot星莫]"
-version = "4.7.3.1"
+version = "4.7.3.2"
 
 api_version = 10
 
@@ -53,12 +46,12 @@ local slot_options = isCh and {
 }
 
 local function Subtitle(name)
-	return {
-		name = name,
-		label = name,
-		options = { {description = "", data = false}, },
-		default = false,
-	}
+    return {
+        name = name,
+        label = name,
+        options = { {description = "", data = false}, },
+        default = false,
+    }
 end
 
 configuration_options = isCh and {
@@ -84,7 +77,7 @@ configuration_options = isCh and {
         default = "extrabody3",
         options = slot_options,
     },
-	Subtitle("UI相关"),
+    Subtitle("UI相关"),
     {
         name = "config_render",
         label = "人物是否显示所有装备外形？",

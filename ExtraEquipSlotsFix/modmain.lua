@@ -153,153 +153,155 @@ local items_types = {
     ["armor_sanity"]      = EQUIP_TYPES.ARMOR, -- 影甲
     ["armorskeleton"]     = EQUIP_TYPES.ARMOR, -- 骨甲
     ["armorwood"]         = EQUIP_TYPES.ARMOR, -- 木甲
-	["armor_lunarplant"]           = EQUIP_TYPES.ARMOR, -- 亮影盔甲
-	["armordreadstone"]            = EQUIP_TYPES.ARMOR, -- 绝望石盔甲
-	["armor_voidcloth"]            = EQUIP_TYPES.ARMOR, -- 暗影长袍
+    ["armor_lunarplant"]           = EQUIP_TYPES.ARMOR, -- 亮影盔甲
+    ["armor_lunarplant_husk"]      = EQUIP_TYPES.ARMOR, -- 荆棘茄甲
+    ["armordreadstone"]            = EQUIP_TYPES.ARMOR, -- 绝望石盔甲
+    ["armor_voidcloth"]            = EQUIP_TYPES.ARMOR, -- 暗影长袍
     -- ["armorwagpunk"]               = EQUIP_TYPES.ARMOR, -- W.A.R.B.I.S盔甲
-	
-	["armor_medal_obsidian"]       = EQUIP_TYPES.ARMOR, -- 能力勋章
-	["armor_blue_crystal"]         = EQUIP_TYPES.ARMOR, -- 能力勋章
-	
-	["golden_armor_mk"]            = EQUIP_TYPES.ARMOR, -- 神话书说
-	["yangjian_armor"]             = EQUIP_TYPES.ARMOR, -- 神话书说
-	["nz_damask"]                  = EQUIP_TYPES.ARMOR, -- 神话书说
-	["armorsiving"]                = EQUIP_TYPES.ARMOR, -- 神话书说
-	["myth_iron_battlegear"]       = EQUIP_TYPES.ARMOR, -- 神话书说
-	
-	["xe_bag"]                     = EQUIP_TYPES.ARMOR, -- 璇儿
-	
-	["icearmor"]                   = EQUIP_TYPES.ARMOR, -- 玉子yuki
-	
-	["yuanzi_armor_lv1"]           = EQUIP_TYPES.ARMOR, -- 乃木園子
-	["yuanzi_armor_lv2"]           = EQUIP_TYPES.ARMOR, -- 乃木園子
-	
-	["monvfu"]                     = EQUIP_TYPES.ARMOR, -- 伊蕾娜
-	["red_fairyskirt"]             = EQUIP_TYPES.ARMOR, -- 伊蕾娜
-	["bule_fairyskirt"]            = EQUIP_TYPES.ARMOR, -- 伊蕾娜
-	["elaina_bq"]                  = EQUIP_TYPES.ARMOR, -- 伊蕾娜
-	["elaina_hlq"]                 = EQUIP_TYPES.ARMOR, -- 伊蕾娜
-	
-	["sora2armor"]                 = EQUIP_TYPES.ARMOR, -- 小穹
-	["soraclothes"]                = EQUIP_TYPES.ARMOR, -- 小穹
-	
-	["purgatory_armor"]            = EQUIP_TYPES.ARMOR, -- 艾露莎
-	
-	["wharang_amulet_sack"]        = EQUIP_TYPES.ARMOR, -- 千年狐
-	
-	["ndnr_armorobsidian"]         = EQUIP_TYPES.ARMOR, -- 富贵
-	
-	["uniform_firemoths"]          = EQUIP_TYPES.ARMOR, -- 希儿-逐火之蛾制服
-	
-	["changchunjz"]                = EQUIP_TYPES.ARMOR, -- 战舰少女-长春的舰装
-	["veneto_jz"]                  = EQUIP_TYPES.ARMOR, -- 战舰少女-维内托的舰装
-	["veneto_jzyf"]                = EQUIP_TYPES.ARMOR, -- 战舰少女-豪华意式舰装
-	["fubuki_jz"]                  = EQUIP_TYPES.ARMOR, -- 战舰少女-吹雪的舰装
-	["lijie_jz"]                   = EQUIP_TYPES.ARMOR, -- 战舰少女补给包-黎塞留的舰装
-	["jianzhuang"]                 = EQUIP_TYPES.ARMOR, -- 战舰少女补给包-欧根的舰装
-	["fbk_jz"]                     = EQUIP_TYPES.ARMOR, -- 战舰少女补给包-吹雪的舰装
-	["lex_jz"]                     = EQUIP_TYPES.ARMOR, -- 战舰少女补给包-列克星敦的舰装
-	["yukikaze_jz"]                = EQUIP_TYPES.ARMOR, -- 战舰少女补给包-火炮鱼雷并联舰装
-	
-	["kahiro_dress"]               = EQUIP_TYPES.ARMOR, --kahiro学院袍 
-	
-	["bf_nightmarearmor"]          = EQUIP_TYPES.ARMOR, --恶魔花护甲
-	
-	["bf_rosearmor"]               = EQUIP_TYPES.ARMOR, --玫瑰护甲
-	
-	["aria_armor_red"]             = EQUIP_TYPES.ARMOR, --艾丽娅·克莉丝塔露（RE）
-	["aria_armor_blue"]            = EQUIP_TYPES.ARMOR, --艾丽娅·克莉丝塔露（RE）
-	["aria_armor_green"]           = EQUIP_TYPES.ARMOR, --艾丽娅·克莉丝塔露（RE）
-	["aria_armor_purple"]          = EQUIP_TYPES.ARMOR, --艾丽娅·克莉丝塔露（RE）
-	
-	["armorlimestone"]             = EQUIP_TYPES.ARMOR, --海难石灰岩套装
-	["armorcactus"]                = EQUIP_TYPES.ARMOR, --海难仙人掌护甲
-	["armorobsidian"]              = EQUIP_TYPES.ARMOR, --海难黑曜石护甲
-	["armorseashell"]              = EQUIP_TYPES.ARMOR, --海难海套贝壳
-	
-	["suozi"]                      = EQUIP_TYPES.ARMOR, --更多武器
-	["bingxin"]                    = EQUIP_TYPES.ARMOR, --更多武器
-	["zhenfen"]                    = EQUIP_TYPES.ARMOR, --更多武器
-	["huomu"]                      = EQUIP_TYPES.ARMOR, --更多武器
-	["landun"]                     = EQUIP_TYPES.ARMOR, --更多武器
-	["riyan"]                      = EQUIP_TYPES.ARMOR, --更多武器
-	["kj"]                         = EQUIP_TYPES.ARMOR, --更多武器
-	["banjia"]                     = EQUIP_TYPES.ARMOR, --更多武器
-	
-	["kemomiminewyifu"]            = EQUIP_TYPES.ARMOR, --小狐狸
-	
-	["featheredtunic"]             = EQUIP_TYPES.ARMOR, --熔炉
-	["forge_woodarmor"]            = EQUIP_TYPES.ARMOR, --熔炉
-	["jaggedarmor"]                = EQUIP_TYPES.ARMOR, --熔炉
-	["silkenarmor"]                = EQUIP_TYPES.ARMOR, --熔炉
-	["splintmail"]                 = EQUIP_TYPES.ARMOR, --熔炉
-	["steadfastarmor"]             = EQUIP_TYPES.ARMOR, --熔炉
-	["armor_hpextraheavy"]         = EQUIP_TYPES.ARMOR, --熔炉
-	["armor_hpdamager"]            = EQUIP_TYPES.ARMOR, --熔炉
-	["armor_hprecharger"]          = EQUIP_TYPES.ARMOR, --熔炉
-	["armor_hppetmastery"]         = EQUIP_TYPES.ARMOR, --熔炉
-	["reedtunic"]                  = EQUIP_TYPES.ARMOR, --熔炉
-	
-	["ov_armor"]                   = EQUIP_TYPES.ARMOR, --和平鸽
-	
-	["armor_glassmail"]            = EQUIP_TYPES.ARMOR, --不妥协
-	["feather_frock_fancy"]        = EQUIP_TYPES.ARMOR, --不妥协
-	["feather_frock"]              = EQUIP_TYPES.ARMOR, --不妥协
-	
-	["xianrenzhangjia"]            = EQUIP_TYPES.ARMOR, --泰拉物品
-	["nanguahujia"]                = EQUIP_TYPES.ARMOR, --泰拉物品
-	["jinjia"]                     = EQUIP_TYPES.ARMOR, --泰拉物品
-	
-	["seele_twinsdress"]           = EQUIP_TYPES.ARMOR, --希儿
-	
-	["forceshield"]                = EQUIP_TYPES.ARMOR, --力场护盾
-	
-	--["goldship_dress1"]            = EQUIP_TYPES.ARMOR, --锦衣玉食
-	--["goldship_dress2"]            = EQUIP_TYPES.ARMOR, --锦衣玉食
-	
-	--lz
-	["armor_cherry"]               = EQUIP_TYPES.ARMOR, -- 樱花林 Rayal Mantle
-	["armor_cherry"]               = EQUIP_TYPES.ARMOR, -- 樱花林 Broken Heart
-	["shenshenghujia"]             = EQUIP_TYPES.ARMOR, -- 泰拉物品
-	["anyingxiongjia"]             = EQUIP_TYPES.ARMOR, -- 泰拉物品
-	["xinghongxiongjia"]           = EQUIP_TYPES.ARMOR, -- 泰拉物品包-猩红鳞甲
+    
+    ["armor_medal_obsidian"]       = EQUIP_TYPES.ARMOR, -- 能力勋章
+    ["armor_blue_crystal"]         = EQUIP_TYPES.ARMOR, -- 能力勋章
+    ["armor_medal_space_time"]     = EQUIP_TYPES.ARMOR, -- 能力勋章
+    
+    ["golden_armor_mk"]            = EQUIP_TYPES.ARMOR, -- 神话书说
+    ["yangjian_armor"]             = EQUIP_TYPES.ARMOR, -- 神话书说
+    ["nz_damask"]                  = EQUIP_TYPES.ARMOR, -- 神话书说
+    ["armorsiving"]                = EQUIP_TYPES.ARMOR, -- 神话书说
+    ["myth_iron_battlegear"]       = EQUIP_TYPES.ARMOR, -- 神话书说
+    
+    ["xe_bag"]                     = EQUIP_TYPES.ARMOR, -- 璇儿
+    
+    ["icearmor"]                   = EQUIP_TYPES.ARMOR, -- 玉子yuki
+    
+    ["yuanzi_armor_lv1"]           = EQUIP_TYPES.ARMOR, -- 乃木園子
+    ["yuanzi_armor_lv2"]           = EQUIP_TYPES.ARMOR, -- 乃木園子
+    
+    ["monvfu"]                     = EQUIP_TYPES.ARMOR, -- 伊蕾娜
+    ["red_fairyskirt"]             = EQUIP_TYPES.ARMOR, -- 伊蕾娜
+    ["bule_fairyskirt"]            = EQUIP_TYPES.ARMOR, -- 伊蕾娜
+    ["elaina_bq"]                  = EQUIP_TYPES.ARMOR, -- 伊蕾娜
+    ["elaina_hlq"]                 = EQUIP_TYPES.ARMOR, -- 伊蕾娜
+    
+    ["sora2armor"]                 = EQUIP_TYPES.ARMOR, -- 小穹
+    ["soraclothes"]                = EQUIP_TYPES.ARMOR, -- 小穹
+    
+    ["purgatory_armor"]            = EQUIP_TYPES.ARMOR, -- 艾露莎
+    
+    ["wharang_amulet_sack"]        = EQUIP_TYPES.ARMOR, -- 千年狐
+    
+    ["ndnr_armorobsidian"]         = EQUIP_TYPES.ARMOR, -- 富贵
+    
+    ["uniform_firemoths"]          = EQUIP_TYPES.ARMOR, -- 希儿-逐火之蛾制服
+    
+    ["changchunjz"]                = EQUIP_TYPES.ARMOR, -- 战舰少女-长春的舰装
+    ["veneto_jz"]                  = EQUIP_TYPES.ARMOR, -- 战舰少女-维内托的舰装
+    ["veneto_jzyf"]                = EQUIP_TYPES.ARMOR, -- 战舰少女-豪华意式舰装
+    ["fubuki_jz"]                  = EQUIP_TYPES.ARMOR, -- 战舰少女-吹雪的舰装
+    ["lijie_jz"]                   = EQUIP_TYPES.ARMOR, -- 战舰少女补给包-黎塞留的舰装
+    ["jianzhuang"]                 = EQUIP_TYPES.ARMOR, -- 战舰少女补给包-欧根的舰装
+    ["fbk_jz"]                     = EQUIP_TYPES.ARMOR, -- 战舰少女补给包-吹雪的舰装
+    ["lex_jz"]                     = EQUIP_TYPES.ARMOR, -- 战舰少女补给包-列克星敦的舰装
+    ["yukikaze_jz"]                = EQUIP_TYPES.ARMOR, -- 战舰少女补给包-火炮鱼雷并联舰装
+    
+    ["kahiro_dress"]               = EQUIP_TYPES.ARMOR, --kahiro学院袍 
+    
+    ["bf_nightmarearmor"]          = EQUIP_TYPES.ARMOR, --恶魔花护甲
+    
+    ["bf_rosearmor"]               = EQUIP_TYPES.ARMOR, --玫瑰护甲
+    
+    ["aria_armor_red"]             = EQUIP_TYPES.ARMOR, --艾丽娅·克莉丝塔露（RE）
+    ["aria_armor_blue"]            = EQUIP_TYPES.ARMOR, --艾丽娅·克莉丝塔露（RE）
+    ["aria_armor_green"]           = EQUIP_TYPES.ARMOR, --艾丽娅·克莉丝塔露（RE）
+    ["aria_armor_purple"]          = EQUIP_TYPES.ARMOR, --艾丽娅·克莉丝塔露（RE）
+    
+    ["armorlimestone"]             = EQUIP_TYPES.ARMOR, --海难石灰岩套装
+    ["armorcactus"]                = EQUIP_TYPES.ARMOR, --海难仙人掌护甲
+    ["armorobsidian"]              = EQUIP_TYPES.ARMOR, --海难黑曜石护甲
+    ["armorseashell"]              = EQUIP_TYPES.ARMOR, --海难海套贝壳
+    
+    ["suozi"]                      = EQUIP_TYPES.ARMOR, --更多武器
+    ["bingxin"]                    = EQUIP_TYPES.ARMOR, --更多武器
+    ["zhenfen"]                    = EQUIP_TYPES.ARMOR, --更多武器
+    ["huomu"]                      = EQUIP_TYPES.ARMOR, --更多武器
+    ["landun"]                     = EQUIP_TYPES.ARMOR, --更多武器
+    ["riyan"]                      = EQUIP_TYPES.ARMOR, --更多武器
+    ["kj"]                         = EQUIP_TYPES.ARMOR, --更多武器
+    ["banjia"]                     = EQUIP_TYPES.ARMOR, --更多武器
+    
+    ["kemomiminewyifu"]            = EQUIP_TYPES.ARMOR, --小狐狸
+    
+    ["featheredtunic"]             = EQUIP_TYPES.ARMOR, --熔炉
+    ["forge_woodarmor"]            = EQUIP_TYPES.ARMOR, --熔炉
+    ["jaggedarmor"]                = EQUIP_TYPES.ARMOR, --熔炉
+    ["silkenarmor"]                = EQUIP_TYPES.ARMOR, --熔炉
+    ["splintmail"]                 = EQUIP_TYPES.ARMOR, --熔炉
+    ["steadfastarmor"]             = EQUIP_TYPES.ARMOR, --熔炉
+    ["armor_hpextraheavy"]         = EQUIP_TYPES.ARMOR, --熔炉
+    ["armor_hpdamager"]            = EQUIP_TYPES.ARMOR, --熔炉
+    ["armor_hprecharger"]          = EQUIP_TYPES.ARMOR, --熔炉
+    ["armor_hppetmastery"]         = EQUIP_TYPES.ARMOR, --熔炉
+    ["reedtunic"]                  = EQUIP_TYPES.ARMOR, --熔炉
+    
+    ["ov_armor"]                   = EQUIP_TYPES.ARMOR, --和平鸽
+    
+    ["armor_glassmail"]            = EQUIP_TYPES.ARMOR, --不妥协
+    ["feather_frock_fancy"]        = EQUIP_TYPES.ARMOR, --不妥协
+    ["feather_frock"]              = EQUIP_TYPES.ARMOR, --不妥协
+    
+    ["xianrenzhangjia"]            = EQUIP_TYPES.ARMOR, --泰拉物品
+    ["nanguahujia"]                = EQUIP_TYPES.ARMOR, --泰拉物品
+    ["jinjia"]                     = EQUIP_TYPES.ARMOR, --泰拉物品
+    
+    ["seele_twinsdress"]           = EQUIP_TYPES.ARMOR, --希儿
+    
+    ["forceshield"]                = EQUIP_TYPES.ARMOR, --力场护盾
+    
+    --["goldship_dress1"]            = EQUIP_TYPES.ARMOR, --锦衣玉食
+    --["goldship_dress2"]            = EQUIP_TYPES.ARMOR, --锦衣玉食
+    
+    --lz
+    ["armor_cherry"]               = EQUIP_TYPES.ARMOR, -- 樱花林 Rayal Mantle
+    ["armor_cherry"]               = EQUIP_TYPES.ARMOR, -- 樱花林 Broken Heart
+    ["shenshenghujia"]             = EQUIP_TYPES.ARMOR, -- 泰拉物品
+    ["anyingxiongjia"]             = EQUIP_TYPES.ARMOR, -- 泰拉物品
+    ["xinghongxiongjia"]           = EQUIP_TYPES.ARMOR, -- 泰拉物品包-猩红鳞甲
     ["zhizhuhujia"]                = EQUIP_TYPES.ARMOR, -- 泰拉物品-蜘蛛护甲
-	["yifu"]                       = EQUIP_TYPES.ARMOR, -- 新护甲
-	["yifubm"]                     = EQUIP_TYPES.ARMOR, -- 新护甲
-	["yifubn"]                     = EQUIP_TYPES.ARMOR, -- 新护甲
-	["yifufy"]                     = EQUIP_TYPES.ARMOR, -- 新护甲
-	["yifugr"]                     = EQUIP_TYPES.ARMOR, -- 新护甲
-	["blackdragon_armor"]          = EQUIP_TYPES.ARMOR, -- 黑龙
-	["carney_ruanjia"]             = EQUIP_TYPES.ARMOR, -- 卡尼猫-内衬软甲
-	["carney_huanyingjia"]         = EQUIP_TYPES.ARMOR, -- 卡尼猫-浅影
-	["armor_tungsten"]             = EQUIP_TYPES.ARMOR, -- 钨矿时代-绝对零度甲 
-	["whyearmor_incomplete"]       = EQUIP_TYPES.ARMOR, -- Ancient Dreams - ACT 1
-	["krm_zafkiel"]                = EQUIP_TYPES.ARMOR, -- 狂三-刻刻帝
-	["krm_armor"]                  = EQUIP_TYPES.ARMOR, -- 狂三-狂狂帝 
-	["armor_elepheetle"]           = EQUIP_TYPES.ARMOR, -- 棱镜-犀金护甲 
-	["armor_mushaa"]               = EQUIP_TYPES.ARMOR, -- 精灵公主Musha-原型盔甲
-	["armor_metalplate_75"]        = EQUIP_TYPES.ARMOR, -- 天体修仙-修仙铠甲75
-	["armor_metalplate_80"]        = EQUIP_TYPES.ARMOR, -- 天体修仙-修仙铠甲80
-	["armor_metalplate_85"]        = EQUIP_TYPES.ARMOR, -- 天体修仙-修仙铠甲85
-	["armor_metalplate_90"]        = EQUIP_TYPES.ARMOR, -- 天体修仙-修仙铠甲90
-	["armor_metalplate_97"]        = EQUIP_TYPES.ARMOR, -- 天体修仙-修仙铠甲97
-	["armor_metalplate_98"]        = EQUIP_TYPES.ARMOR, -- 天体修仙-修仙铠甲98
-	["hl_wheatpack"]               = EQUIP_TYPES.ARMOR, -- 贤狼赫萝-麦穗袋
-	["gg_armor"]                   = EQUIP_TYPES.ARMOR, -- 澄闪的喜夜侍者套装
-	["marbled_armor"]              = EQUIP_TYPES.ARMOR, -- Level and Achievement By Chasni (2023)-战神胸甲
-	["thunder_armor"]              = EQUIP_TYPES.ARMOR, -- Level and Achievement By Chasni (2023)-雷神斗篷
-	["distortion"]                 = EQUIP_TYPES.ARMOR, -- Kanade_AngelBeats!-扭曲护盾
-	["myxl_dreambook"]             = EQUIP_TYPES.ARMOR, -- 璇儿-遗梦芸典
-	["armorlswq"]                  = EQUIP_TYPES.ARMOR, -- 神圣羽衣
-	["armor_leaf"]                 = EQUIP_TYPES.ARMOR, -- Albe物品包-翠绿哨兵
-	["mmiko_armor"]                = EQUIP_TYPES.ARMOR, -- M.louls-巫女长袍
-	["daidai_armor"]               = EQUIP_TYPES.ARMOR, -- 袋袋daidai-钢羊毛背心
-	["armor_victoria"]             = EQUIP_TYPES.ARMOR, -- 袋袋daidai-钢羊毛外套
-	["asa_drone"]                  = EQUIP_TYPES.ARMOR, -- 义体人-防御无人机
-	["armor_moonglass"]            = EQUIP_TYPES.ARMOR, -- Celestial Tools-Moon Suit
-	["rei_armor"]                  = EQUIP_TYPES.ARMOR, -- 怜rei-板甲
-	["rei_yifu2"]                  = EQUIP_TYPES.ARMOR, -- 怜rei-苍天之袍
-	["armor_sharksuit_um"]         = EQUIP_TYPES.ARMOR, -- 永不妥协-Rock Hide Armor
+    ["yifu"]                       = EQUIP_TYPES.ARMOR, -- 新护甲
+    ["yifubm"]                     = EQUIP_TYPES.ARMOR, -- 新护甲
+    ["yifubn"]                     = EQUIP_TYPES.ARMOR, -- 新护甲
+    ["yifufy"]                     = EQUIP_TYPES.ARMOR, -- 新护甲
+    ["yifugr"]                     = EQUIP_TYPES.ARMOR, -- 新护甲
+    ["blackdragon_armor"]          = EQUIP_TYPES.ARMOR, -- 黑龙
+    ["carney_ruanjia"]             = EQUIP_TYPES.ARMOR, -- 卡尼猫-内衬软甲
+    ["carney_huanyingjia"]         = EQUIP_TYPES.ARMOR, -- 卡尼猫-浅影
+    ["armor_tungsten"]             = EQUIP_TYPES.ARMOR, -- 钨矿时代-绝对零度甲 
+    ["whyearmor_incomplete"]       = EQUIP_TYPES.ARMOR, -- Ancient Dreams - ACT 1
+    ["krm_zafkiel"]                = EQUIP_TYPES.ARMOR, -- 狂三-刻刻帝
+    ["krm_armor"]                  = EQUIP_TYPES.ARMOR, -- 狂三-狂狂帝 
+    ["armor_elepheetle"]           = EQUIP_TYPES.ARMOR, -- 棱镜-犀金护甲 
+    ["armor_mushaa"]               = EQUIP_TYPES.ARMOR, -- 精灵公主Musha-原型盔甲
+    ["armor_metalplate_75"]        = EQUIP_TYPES.ARMOR, -- 天体修仙-修仙铠甲75
+    ["armor_metalplate_80"]        = EQUIP_TYPES.ARMOR, -- 天体修仙-修仙铠甲80
+    ["armor_metalplate_85"]        = EQUIP_TYPES.ARMOR, -- 天体修仙-修仙铠甲85
+    ["armor_metalplate_90"]        = EQUIP_TYPES.ARMOR, -- 天体修仙-修仙铠甲90
+    ["armor_metalplate_97"]        = EQUIP_TYPES.ARMOR, -- 天体修仙-修仙铠甲97
+    ["armor_metalplate_98"]        = EQUIP_TYPES.ARMOR, -- 天体修仙-修仙铠甲98
+    ["hl_wheatpack"]               = EQUIP_TYPES.ARMOR, -- 贤狼赫萝-麦穗袋
+    ["gg_armor"]                   = EQUIP_TYPES.ARMOR, -- 澄闪的喜夜侍者套装
+    ["marbled_armor"]              = EQUIP_TYPES.ARMOR, -- Level and Achievement By Chasni (2023)-战神胸甲
+    ["thunder_armor"]              = EQUIP_TYPES.ARMOR, -- Level and Achievement By Chasni (2023)-雷神斗篷
+    ["distortion"]                 = EQUIP_TYPES.ARMOR, -- Kanade_AngelBeats!-扭曲护盾
+    ["myxl_dreambook"]             = EQUIP_TYPES.ARMOR, -- 璇儿-遗梦芸典
+    ["armorlswq"]                  = EQUIP_TYPES.ARMOR, -- 神圣羽衣
+    ["armor_leaf"]                 = EQUIP_TYPES.ARMOR, -- Albe物品包-翠绿哨兵
+    ["mmiko_armor"]                = EQUIP_TYPES.ARMOR, -- M.louls-巫女长袍
+    ["daidai_armor"]               = EQUIP_TYPES.ARMOR, -- 袋袋daidai-钢羊毛背心
+    ["armor_victoria"]             = EQUIP_TYPES.ARMOR, -- 袋袋daidai-钢羊毛外套
+    ["asa_drone"]                  = EQUIP_TYPES.ARMOR, -- 义体人-防御无人机
+    ["armor_moonglass"]            = EQUIP_TYPES.ARMOR, -- Celestial Tools-Moon Suit
+    ["rei_armor"]                  = EQUIP_TYPES.ARMOR, -- 怜rei-板甲
+    ["rei_yifu2"]                  = EQUIP_TYPES.ARMOR, -- 怜rei-苍天之袍
+    ["armor_sharksuit_um"]         = EQUIP_TYPES.ARMOR, -- 永不妥协-Rock Hide Armor
     ["armor_reed_um"]              = EQUIP_TYPES.ARMOR, -- 永不妥协-Reed Suit
     ["yuanzi_armor_lv3"]           = EQUIP_TYPES.ARMOR, -- 乃木園子升级组件-园子的半神服
     ["armor_honey"]                = EQUIP_TYPES.ARMOR, -- Wuzzy The Buzzy-honey suit
@@ -309,17 +311,17 @@ local items_types = {
     
     
     --Gemstone Armor V.N
-	["armor_orangegem"]            = EQUIP_TYPES.ARMOR, -- Armor Breastplate
-	["armor_bluegem"]              = EQUIP_TYPES.ARMOR, -- Armor Cuirass
-	["armor_redgem"]               = EQUIP_TYPES.ARMOR, -- Armor Chestplate
-	["armor_greengem"]             = EQUIP_TYPES.ARMOR, -- Armor Mail
-	["armor_opalgem"]              = EQUIP_TYPES.ARMOR, -- Armor Suit
-	["armor_yellowgem"]            = EQUIP_TYPES.ARMOR, -- Armor Brigandine
-	["armor_purplegem"]            = EQUIP_TYPES.ARMOR, -- Armor Hauberk
+    ["armor_orangegem"]            = EQUIP_TYPES.ARMOR, -- Armor Breastplate
+    ["armor_bluegem"]              = EQUIP_TYPES.ARMOR, -- Armor Cuirass
+    ["armor_redgem"]               = EQUIP_TYPES.ARMOR, -- Armor Chestplate
+    ["armor_greengem"]             = EQUIP_TYPES.ARMOR, -- Armor Mail
+    ["armor_opalgem"]              = EQUIP_TYPES.ARMOR, -- Armor Suit
+    ["armor_yellowgem"]            = EQUIP_TYPES.ARMOR, -- Armor Brigandine
+    ["armor_purplegem"]            = EQUIP_TYPES.ARMOR, -- Armor Hauberk
 
-	["lavaarena_armormediumrecharger"]             = EQUIP_TYPES.ARMOR, -- 热带体验-丝带木甲
-	["lavaarena_armormedium"]                      = EQUIP_TYPES.ARMOR, -- 热带体验-木质护甲
-	["lavaarena_armorlightspeed"]                  = EQUIP_TYPES.ARMOR, -- 热带体验-羽饰芦苇外衣
+    ["lavaarena_armormediumrecharger"]             = EQUIP_TYPES.ARMOR, -- 热带体验-丝带木甲
+    ["lavaarena_armormedium"]                      = EQUIP_TYPES.ARMOR, -- 热带体验-木质护甲
+    ["lavaarena_armorlightspeed"]                  = EQUIP_TYPES.ARMOR, -- 热带体验-羽饰芦苇外衣
     ["lavaarena_armormediumdamager"]               = EQUIP_TYPES.ARMOR, -- 热带体验-锯齿木甲
     ["lavaarena_armor_hpextraheavy"]               = EQUIP_TYPES.ARMOR, -- 热带体验-华丽坚固盔甲
     ["lavaarena_armor_hpdamager"]                  = EQUIP_TYPES.ARMOR, -- 热带体验-华丽巨齿盔甲
@@ -350,80 +352,80 @@ local items_types = {
     ["carnival_vest_a"]  = EQUIP_TYPES.CLOTHING, -- 叽叽喳喳的围巾
     ["carnival_vest_b"]  = EQUIP_TYPES.CLOTHING, -- 叽叽喳喳的斗篷
     ["carnival_vest_c"]  = EQUIP_TYPES.CLOTHING, -- 叽叽喳喳的披肩
-	
-	["down_filled_coat"]    = EQUIP_TYPES.CLOTHING, -- 能力勋章
-	
-	["cassock"]             = EQUIP_TYPES.CLOTHING, -- 神话书说
-	["kam_lan_cassock"]     = EQUIP_TYPES.CLOTHING, -- 神话书说
-	["madameweb_armor"]     = EQUIP_TYPES.CLOTHING, -- 神话书说
-	
-	["sachet"]              = EQUIP_TYPES.CLOTHING, -- 棱镜
-	
-	["veneto_yifu"]         = EQUIP_TYPES.CLOTHING, -- 战舰少女维内托-小时候的衣服
-	["zhifu"]               = EQUIP_TYPES.CLOTHING, -- 战舰少女补给包-秋冬制服
-	
-	["dress_sea"]           = EQUIP_TYPES.CLOTHING, -- 希儿-幻海梦蝶
-	["seele_swimsuit"]      = EQUIP_TYPES.CLOTHING, -- 希儿-夏雪铃兰
-	
-	["balloonvest"]         = EQUIP_TYPES.CLOTHING, -- 救生衣
-	["armor_lifejacket"]    = EQUIP_TYPES.CLOTHING, -- 救生衣
-	["tarsuit"]             = EQUIP_TYPES.CLOTHING, -- 焦油套装
-	["armor_windbreaker"]   = EQUIP_TYPES.CLOTHING, -- 防风衣
-	["blubbersuit"]         = EQUIP_TYPES.CLOTHING, -- 鲸脂套装
-	["armor_snakeskin"]     = EQUIP_TYPES.CLOTHING, -- 蛇皮夹克
-	
-	["amiya_fengyi1"]               = EQUIP_TYPES.CLOTHING, -- 领导者风衣α-阿米娅
+    
+    ["down_filled_coat"]    = EQUIP_TYPES.CLOTHING, -- 能力勋章
+    
+    ["cassock"]             = EQUIP_TYPES.CLOTHING, -- 神话书说
+    ["kam_lan_cassock"]     = EQUIP_TYPES.CLOTHING, -- 神话书说
+    ["madameweb_armor"]     = EQUIP_TYPES.CLOTHING, -- 神话书说
+    
+    ["sachet"]              = EQUIP_TYPES.CLOTHING, -- 棱镜
+    
+    ["veneto_yifu"]         = EQUIP_TYPES.CLOTHING, -- 战舰少女维内托-小时候的衣服
+    ["zhifu"]               = EQUIP_TYPES.CLOTHING, -- 战舰少女补给包-秋冬制服
+    
+    ["dress_sea"]           = EQUIP_TYPES.CLOTHING, -- 希儿-幻海梦蝶
+    ["seele_swimsuit"]      = EQUIP_TYPES.CLOTHING, -- 希儿-夏雪铃兰
+    
+    ["balloonvest"]         = EQUIP_TYPES.CLOTHING, -- 救生衣
+    ["armor_lifejacket"]    = EQUIP_TYPES.CLOTHING, -- 救生衣
+    ["tarsuit"]             = EQUIP_TYPES.CLOTHING, -- 焦油套装
+    ["armor_windbreaker"]   = EQUIP_TYPES.CLOTHING, -- 防风衣
+    ["blubbersuit"]         = EQUIP_TYPES.CLOTHING, -- 鲸脂套装
+    ["armor_snakeskin"]     = EQUIP_TYPES.CLOTHING, -- 蛇皮夹克
+    
+    ["amiya_fengyi1"]               = EQUIP_TYPES.CLOTHING, -- 领导者风衣α-阿米娅
     ["amiya_fengyi2"]               = EQUIP_TYPES.CLOTHING, -- 领导者风衣β-阿米娅
     ["amiya_fengyi3"]               = EQUIP_TYPES.CLOTHING, -- 领导者风衣γ-阿米娅
-	
-	-- ["gura_floaties"]              = EQUIP_TYPES.CLOTHING, --古拉
-	
-	["hanfu1"]                     = EQUIP_TYPES.CLOTHING, --锦衣玉食
-	["hanfu2"]                     = EQUIP_TYPES.CLOTHING, --锦衣玉食
-	
+    
+    -- ["gura_floaties"]              = EQUIP_TYPES.CLOTHING, --古拉
+    
+    ["hanfu1"]                     = EQUIP_TYPES.CLOTHING, --锦衣玉食
+    ["hanfu2"]                     = EQUIP_TYPES.CLOTHING, --锦衣玉食
+    
     -- lz
     -- ["elaina_most_brooch"]         = EQUIP_TYPES.CLOTHING, -- 魔女之旅-最强胸针
     ["m_scarf"]                    = EQUIP_TYPES.CLOTHING, -- M.louls-黑围巾
-	["krm_uniform"]                = EQUIP_TYPES.CLOTHING, -- 狂三-校服
-	["cherryvest"]                 = EQUIP_TYPES.CLOTHING, -- 樱花林 Royle Mantle
-	["mandrake_capelet"]           = EQUIP_TYPES.CLOTHING, -- 曼德拉斗篷
-	["wedding_dress"]              = EQUIP_TYPES.CLOTHING, -- 那年花嫁-凤夙霞披
-	["wedding_dress"]              = EQUIP_TYPES.CLOTHING, -- 那年花嫁-凤夙霞披
-	["goldship_dress1"]            = EQUIP_TYPES.CLOTHING, -- 黄金船-外星人决胜服
-	["goldship_dress2"]            = EQUIP_TYPES.CLOTHING, -- 黄金船-黄金黄金星泳衣
-	["skirt_x"]                    = EQUIP_TYPES.CLOTHING, -- 大狐狸-狐狸裙子
-	["hl_travelerwindbreaker"]     = EQUIP_TYPES.CLOTHING, -- 贤狼赫萝-旅行者风衣
-	["satori_eye"]                 = EQUIP_TYPES.CLOTHING, -- satori-普通眼
-	["satori_eye2"]                = EQUIP_TYPES.CLOTHING, -- satori-增幅眼
-	["armor_tiddlesapron"]         = EQUIP_TYPES.CLOTHING, -- 黑死病-Sanitation Apron
+    ["krm_uniform"]                = EQUIP_TYPES.CLOTHING, -- 狂三-校服
+    ["cherryvest"]                 = EQUIP_TYPES.CLOTHING, -- 樱花林 Royle Mantle
+    ["mandrake_capelet"]           = EQUIP_TYPES.CLOTHING, -- 曼德拉斗篷
+    ["wedding_dress"]              = EQUIP_TYPES.CLOTHING, -- 那年花嫁-凤夙霞披
+    ["wedding_dress"]              = EQUIP_TYPES.CLOTHING, -- 那年花嫁-凤夙霞披
+    ["goldship_dress1"]            = EQUIP_TYPES.CLOTHING, -- 黄金船-外星人决胜服
+    ["goldship_dress2"]            = EQUIP_TYPES.CLOTHING, -- 黄金船-黄金黄金星泳衣
+    ["skirt_x"]                    = EQUIP_TYPES.CLOTHING, -- 大狐狸-狐狸裙子
+    ["hl_travelerwindbreaker"]     = EQUIP_TYPES.CLOTHING, -- 贤狼赫萝-旅行者风衣
+    ["satori_eye"]                 = EQUIP_TYPES.CLOTHING, -- satori-普通眼
+    ["satori_eye2"]                = EQUIP_TYPES.CLOTHING, -- satori-增幅眼
+    ["armor_tiddlesapron"]         = EQUIP_TYPES.CLOTHING, -- 黑死病-Sanitation Apron
     -- ["abigail_flower"]             = EQUIP_TYPES.CLOTHING, -- 阿比盖尔之花|增强
-	["rei_yifu"]                   = EQUIP_TYPES.CLOTHING, -- 怜rei-妖丽虚像
-	["um_armor_pyre_nettles"]      = EQUIP_TYPES.CLOTHING, -- 永不妥协-Pyre Mantle
-	["ccs_skirt1"]                 = EQUIP_TYPES.CLOTHING, -- 魔法小樱-衣服
-	["diana_armor_level_1"]        = EQUIP_TYPES.CLOTHING, -- 枝江往事-小驴装1
-	["diana_armor_level_2"]        = EQUIP_TYPES.CLOTHING, -- 枝江往事-小驴装2
-	["diana_armor_level_3"]        = EQUIP_TYPES.CLOTHING, -- 枝江往事-小驴装3
-	["delieverrobe"]               = EQUIP_TYPES.CLOTHING, -- The lamb-Devotee's robe
+    ["rei_yifu"]                   = EQUIP_TYPES.CLOTHING, -- 怜rei-妖丽虚像
+    ["um_armor_pyre_nettles"]      = EQUIP_TYPES.CLOTHING, -- 永不妥协-Pyre Mantle
+    ["ccs_skirt1"]                 = EQUIP_TYPES.CLOTHING, -- 魔法小樱-衣服
+    ["diana_armor_level_1"]        = EQUIP_TYPES.CLOTHING, -- 枝江往事-小驴装1
+    ["diana_armor_level_2"]        = EQUIP_TYPES.CLOTHING, -- 枝江往事-小驴装2
+    ["diana_armor_level_3"]        = EQUIP_TYPES.CLOTHING, -- 枝江往事-小驴装3
+    ["delieverrobe"]               = EQUIP_TYPES.CLOTHING, -- The lamb-Devotee's robe
     ["third_eye"]                  = EQUIP_TYPES.CLOTHING, -- 古明地恋（重置版）- 恋恋的第三只眼
     ["third_eye2"]                 = EQUIP_TYPES.CLOTHING, -- 古明地恋（重置版）- 恋恋的增幅第三只眼
     ["woolen_sweater"]             = EQUIP_TYPES.CLOTHING, -- 山海秘藏-羊毛衫
     ["lg_fufeng"]                  = EQUIP_TYPES.CLOTHING, -- 海洋传说-雨花·扶风
 
     --璇儿-伞
-	["myxl_san_ll"]                   = EQUIP_TYPES.CLOTHING,
-	["myxl_san_xj"]                   = EQUIP_TYPES.CLOTHING, 
-	["myxl_san_ss"]                   = EQUIP_TYPES.CLOTHING,
-	["myxl_san_ts"]                   = EQUIP_TYPES.CLOTHING, 
+    ["myxl_san_ll"]                   = EQUIP_TYPES.CLOTHING,
+    ["myxl_san_xj"]                   = EQUIP_TYPES.CLOTHING, 
+    ["myxl_san_ss"]                   = EQUIP_TYPES.CLOTHING,
+    ["myxl_san_ts"]                   = EQUIP_TYPES.CLOTHING, 
     
 
     --一出好戏的戏服
-	["costume_blacksmith_body"]                   = EQUIP_TYPES.CLOTHING, -- 铁匠服
-	["costume_doll_body"]                         = EQUIP_TYPES.CLOTHING, -- 玩偶服
-	["costume_foal_body"]                         = EQUIP_TYPES.CLOTHING, -- 小丑服
-	["costume_king_body"]                         = EQUIP_TYPES.CLOTHING, -- 国王服
-	["costume_mirror_body"]                       = EQUIP_TYPES.CLOTHING, -- 镜子服
-	["costume_queen_body"]                        = EQUIP_TYPES.CLOTHING, -- 女王服
-	["costume_tree_body"]                         = EQUIP_TYPES.CLOTHING, -- 树木服
+    ["costume_blacksmith_body"]                   = EQUIP_TYPES.CLOTHING, -- 铁匠服
+    ["costume_doll_body"]                         = EQUIP_TYPES.CLOTHING, -- 玩偶服
+    ["costume_foal_body"]                         = EQUIP_TYPES.CLOTHING, -- 小丑服
+    ["costume_king_body"]                         = EQUIP_TYPES.CLOTHING, -- 国王服
+    ["costume_mirror_body"]                       = EQUIP_TYPES.CLOTHING, -- 镜子服
+    ["costume_queen_body"]                        = EQUIP_TYPES.CLOTHING, -- 女王服
+    ["costume_tree_body"]                         = EQUIP_TYPES.CLOTHING, -- 树木服
 
 
 
@@ -435,78 +437,78 @@ local items_types = {
     ["orangeamulet"] = EQUIP_TYPES.AMULET, -- 懒人护符
     ["greenamulet"]  = EQUIP_TYPES.AMULET, -- 建造护符
     ["yellowamulet"] = EQUIP_TYPES.AMULET, -- 魔光护符
-	
-	["brooch1"]                  = EQUIP_TYPES.AMULET, -- 伊蕾娜
-	["brooch2"]                  = EQUIP_TYPES.AMULET, -- 伊蕾娜
-	["brooch4"]                  = EQUIP_TYPES.AMULET, -- 伊蕾娜
-	["brooch5"]                  = EQUIP_TYPES.AMULET, -- 伊蕾娜
-	["brooch6"]                  = EQUIP_TYPES.AMULET, -- 伊蕾娜
-	["brooch7"]                  = EQUIP_TYPES.AMULET, -- 伊蕾娜
-	["brooch8"]                  = EQUIP_TYPES.AMULET, -- 伊蕾娜
-	["brooch9"]                  = EQUIP_TYPES.AMULET, -- 伊蕾娜
-	["moon_brooch"]              = EQUIP_TYPES.AMULET, -- 伊蕾娜
-	["star_brooch"]              = EQUIP_TYPES.AMULET, -- 伊蕾娜
-	
-	["sora2amulet"]              = EQUIP_TYPES.AMULET, -- 小穹
-	["sorabowknot"]              = EQUIP_TYPES.AMULET, -- 小穹
-	
-	["luckamulet"]               = EQUIP_TYPES.AMULET, -- 经济学
-	
-	["wharang_amulet"]           = EQUIP_TYPES.AMULET, -- 千年狐
-	
-	["ndnr_opalpreciousamulet"]  = EQUIP_TYPES.AMULET, -- 富贵
-	
-	["terraprisma"]              = EQUIP_TYPES.AMULET, -- 光棱剑
-	
-	["aria_seaamulet"]           = EQUIP_TYPES.AMULET, --艾丽娅
-	
-	["kemomimi_new_xianglian"]   = EQUIP_TYPES.AMULET, --小狐狸
-	["kemomimi_bell"]            = EQUIP_TYPES.AMULET, --小狐狸
-	["kemomimi_utr_xl"]          = EQUIP_TYPES.AMULET, --小狐狸
-	
-	["philosopherstone"]         = EQUIP_TYPES.AMULET, --托托莉
-	
-	["ov_amulet1"]               = EQUIP_TYPES.AMULET, --和平鸽
-	["ov_amulet2"]               = EQUIP_TYPES.AMULET, --和平鸽
-	["ov_bag2"]                  = EQUIP_TYPES.AMULET, --和平鸽
-	
-	["klaus_amulet"]                       = EQUIP_TYPES.AMULET, --不妥协
-	["ancient_amulet_red_demoneye"]        = EQUIP_TYPES.AMULET, --不妥协
-	["oculet"]                             = EQUIP_TYPES.AMULET, --不妥协
-	["ancient_amulet_red"]                 = EQUIP_TYPES.AMULET, --不妥协
-	
-	--["jinshudaikou"]                  = EQUIP_TYPES.AMULET, --泰拉物品
-	--["zaishengshouhuan"]              = EQUIP_TYPES.AMULET, --泰拉物品
-	--["ruchongweijin"]                 = EQUIP_TYPES.AMULET, --泰拉物品
-	
-	["elaina_most_brooch"]       = EQUIP_TYPES.AMULET, -- 伊蕾娜
-	
-	["ysyu"]                     = EQUIP_TYPES.AMULET, -- 花千骨
-	["tsd"]                      = EQUIP_TYPES.AMULET, -- 花千骨
-	
+    
+    ["brooch1"]                  = EQUIP_TYPES.AMULET, -- 伊蕾娜
+    ["brooch2"]                  = EQUIP_TYPES.AMULET, -- 伊蕾娜
+    ["brooch4"]                  = EQUIP_TYPES.AMULET, -- 伊蕾娜
+    ["brooch5"]                  = EQUIP_TYPES.AMULET, -- 伊蕾娜
+    ["brooch6"]                  = EQUIP_TYPES.AMULET, -- 伊蕾娜
+    ["brooch7"]                  = EQUIP_TYPES.AMULET, -- 伊蕾娜
+    ["brooch8"]                  = EQUIP_TYPES.AMULET, -- 伊蕾娜
+    ["brooch9"]                  = EQUIP_TYPES.AMULET, -- 伊蕾娜
+    ["moon_brooch"]              = EQUIP_TYPES.AMULET, -- 伊蕾娜
+    ["star_brooch"]              = EQUIP_TYPES.AMULET, -- 伊蕾娜
+    
+    ["sora2amulet"]              = EQUIP_TYPES.AMULET, -- 小穹
+    ["sorabowknot"]              = EQUIP_TYPES.AMULET, -- 小穹
+    
+    ["luckamulet"]               = EQUIP_TYPES.AMULET, -- 经济学
+    
+    ["wharang_amulet"]           = EQUIP_TYPES.AMULET, -- 千年狐
+    
+    ["ndnr_opalpreciousamulet"]  = EQUIP_TYPES.AMULET, -- 富贵
+    
+    ["terraprisma"]              = EQUIP_TYPES.AMULET, -- 光棱剑
+    
+    ["aria_seaamulet"]           = EQUIP_TYPES.AMULET, --艾丽娅
+    
+    ["kemomimi_new_xianglian"]   = EQUIP_TYPES.AMULET, --小狐狸
+    ["kemomimi_bell"]            = EQUIP_TYPES.AMULET, --小狐狸
+    ["kemomimi_utr_xl"]          = EQUIP_TYPES.AMULET, --小狐狸
+    
+    ["philosopherstone"]         = EQUIP_TYPES.AMULET, --托托莉
+    
+    ["ov_amulet1"]               = EQUIP_TYPES.AMULET, --和平鸽
+    ["ov_amulet2"]               = EQUIP_TYPES.AMULET, --和平鸽
+    ["ov_bag2"]                  = EQUIP_TYPES.AMULET, --和平鸽
+    
+    ["klaus_amulet"]                       = EQUIP_TYPES.AMULET, --不妥协
+    ["ancient_amulet_red_demoneye"]        = EQUIP_TYPES.AMULET, --不妥协
+    ["oculet"]                             = EQUIP_TYPES.AMULET, --不妥协
+    ["ancient_amulet_red"]                 = EQUIP_TYPES.AMULET, --不妥协
+    
+    --["jinshudaikou"]                  = EQUIP_TYPES.AMULET, --泰拉物品
+    --["zaishengshouhuan"]              = EQUIP_TYPES.AMULET, --泰拉物品
+    --["ruchongweijin"]                 = EQUIP_TYPES.AMULET, --泰拉物品
+    
+    ["elaina_most_brooch"]       = EQUIP_TYPES.AMULET, -- 伊蕾娜
+    
+    ["ysyu"]                     = EQUIP_TYPES.AMULET, -- 花千骨
+    ["tsd"]                      = EQUIP_TYPES.AMULET, -- 花千骨
+    
     -- lz
-	["cherryamulet"]               = EQUIP_TYPES.AMULET, -- 樱花林 Friendship Necklace
-	["moonamulet"]                 = EQUIP_TYPES.AMULET, -- 月光护符
-	["tsd"]                        = EQUIP_TYPES.AMULET, -- 花千骨-天水滴
-	["carney_hushenfu"]            = EQUIP_TYPES.AMULET, -- 卡尼猫-护身符
-	["yushou"]                     = EQUIP_TYPES.AMULET, -- 八重神子-御守
-	["squidamulet"]                = EQUIP_TYPES.AMULET, -- 鱿鱼之心-鱿鱼的庇护
-	["wedding_necklace"]           = EQUIP_TYPES.AMULET, -- 那年花嫁-繁华坠
-	["teng_amult"]                 = EQUIP_TYPES.AMULET, -- 疼的工具-疼の护符
-	["goldship_eye"]               = EQUIP_TYPES.AMULET, -- 黄金船-宇宙合金眼角膜
-	["breath_wind"]                = EQUIP_TYPES.AMULET, -- 乃木園子-优雅的思念
-	["fire_bless"]                 = EQUIP_TYPES.AMULET, -- 乃木園子-风度翩翩
-	["health_rune"]                = EQUIP_TYPES.AMULET, -- 乃木園子-清纯之心
+    ["cherryamulet"]               = EQUIP_TYPES.AMULET, -- 樱花林 Friendship Necklace
+    ["moonamulet"]                 = EQUIP_TYPES.AMULET, -- 月光护符
+    ["tsd"]                        = EQUIP_TYPES.AMULET, -- 花千骨-天水滴
+    ["carney_hushenfu"]            = EQUIP_TYPES.AMULET, -- 卡尼猫-护身符
+    ["yushou"]                     = EQUIP_TYPES.AMULET, -- 八重神子-御守
+    ["squidamulet"]                = EQUIP_TYPES.AMULET, -- 鱿鱼之心-鱿鱼的庇护
+    ["wedding_necklace"]           = EQUIP_TYPES.AMULET, -- 那年花嫁-繁华坠
+    ["teng_amult"]                 = EQUIP_TYPES.AMULET, -- 疼的工具-疼の护符
+    ["goldship_eye"]               = EQUIP_TYPES.AMULET, -- 黄金船-宇宙合金眼角膜
+    ["breath_wind"]                = EQUIP_TYPES.AMULET, -- 乃木園子-优雅的思念
+    ["fire_bless"]                 = EQUIP_TYPES.AMULET, -- 乃木園子-风度翩翩
+    ["health_rune"]                = EQUIP_TYPES.AMULET, -- 乃木園子-清纯之心
     ["krm_spirit_crystal"]         = EQUIP_TYPES.AMULET, -- 狂三-二亚的灵结晶  
     ["aria_rabbitfoot"]            = EQUIP_TYPES.AMULET, -- 艾丽娅·克莉丝塔露（RE）|幸运的兔子脚
-	["baiseamulet"]                = EQUIP_TYPES.AMULET, -- 超越证明
-	["daidai_hat"]                 = EQUIP_TYPES.AMULET, -- 袋袋daidai-小狗别针
-	["rei_icon"]                   = EQUIP_TYPES.AMULET, -- 怜rei-爱梅斯的守护
-	["myxl_hairpin"]               = EQUIP_TYPES.AMULET, -- 璇儿-簪子
-	["myxl_ribbon"]                = EQUIP_TYPES.AMULET, -- 璇儿-簪子
-	["nanashi_mumei_lantern"]      = EQUIP_TYPES.AMULET, -- MUMEI-蓝灯
-	["ccs_card_box"]               = EQUIP_TYPES.AMULET, -- 魔法小樱-卡牌盒
-	["ccs_amulet"]                 = EQUIP_TYPES.AMULET, -- 魔法小樱-护符
+    ["baiseamulet"]                = EQUIP_TYPES.AMULET, -- 超越证明
+    ["daidai_hat"]                 = EQUIP_TYPES.AMULET, -- 袋袋daidai-小狗别针
+    ["rei_icon"]                   = EQUIP_TYPES.AMULET, -- 怜rei-爱梅斯的守护
+    ["myxl_hairpin"]               = EQUIP_TYPES.AMULET, -- 璇儿-簪子
+    ["myxl_ribbon"]                = EQUIP_TYPES.AMULET, -- 璇儿-簪子
+    ["nanashi_mumei_lantern"]      = EQUIP_TYPES.AMULET, -- MUMEI-蓝灯
+    ["ccs_card_box"]               = EQUIP_TYPES.AMULET, -- 魔法小樱-卡牌盒
+    ["ccs_amulet"]                 = EQUIP_TYPES.AMULET, -- 魔法小樱-护符
     ["tz_fh_ns"]                   = EQUIP_TYPES.AMULET, -- 太真-番号海洋女神的祝福
     ["tz_fh_ly"]                   = EQUIP_TYPES.AMULET, -- 太真-番号两仪
     
@@ -767,6 +769,9 @@ if EQUIP_TYPES.ARMOR ~= GLOBAL.EQUIPSLOTS.BODY then
     MakeRepairableFix("armor_voidcloth")
     MakeRepairableFix("armor_lunarplant")
     MakeRepairableFix("armor_lunarplant_husk")
+    -- MakeRepairableFix("armor_medal_obsidian")
+    -- MakeRepairableFix("armor_blue_crystal")
+    -- MakeRepairableFix("armor_medal_space_time")
 end
 
 
@@ -782,7 +787,7 @@ if GetModConfigData("config_render") then
         ["piggyback"]    = {"swap_piggyback",    "swap_body"}, -- 小猪背包
         ["seedpouch"]    = {"seedpouch",         "swap_body"}, -- 种子袋
         ["spicepack"]    = {"swap_chefpack",     "swap_body"}, -- 厨师袋
-		
+        
         ["onemanband"]        = {"swap_one_man_band",  "swap_body_tall"}, -- 独奏乐器
 
         ["armorsnurtleshell"] = {"armor_slurtleshell", "swap_body_tall"}, -- 蜗牛护甲
