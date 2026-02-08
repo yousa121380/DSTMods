@@ -1,17 +1,6 @@
 local isCh = locale == "zh" or locale == "zhr"--是否为中文
 name = isCh and "四/五/六格装备栏（留言适配模组）" or "Extra Equip Slots+1/2/3 (Tell me what you want)"
-description = isCh and [[带背包功能的装备需要使用分开布局才能正常显示哦
-需要兼容装备特效的，请在设置中打开修复选项，并且把装备栏调成关闭
-4.6.1更新融合了 “xingmot星莫” 授权的假人代码，不需要再开假人补丁了
-4.6.5与附魔mod作者 “朋也” 排除了冲突问题，不会再把装备放到头上了
-其余更新内容请看工坊简介，不过很早就暂停同步了(累)
-
-Mod介绍：
-给护甲、衣服和护身符添加单独的装备槽。默认全开，可以自行调节位置，在背包格子和头部装备直接顺序添加。默认分配护甲，衣服，护身符为插槽1，2，3，如果有插槽未被选中或关闭，该插槽在游戏中将被禁用
-
-PS:可留言适配其他模组内容，请各位先行试用后再进行回复，回复后请订阅本mod或订阅评论区通知，不然收不到提醒，本人能力有限，酌情添加
-2023/7/11，之后的版本修改和搬运还是跟原项目组说一下，本mod目前仅在作者栏及其原代码框架作者底下被授权发布
-后续更新的新版图标仅由 凛子不是林子 本人使用，严禁除本人外任何人使用]] 
+description = isCh and [[四/五/六格装备栏 适配了拳击袋，修复了虚空长袍，亮茄甲，荆棘茄甲修复之后变成背包槽位的版本]] 
 or 
 [[！！！My English is not good, maybe there is a wrong description！！！
 Equipment with backpack function needs to use separate layout to display normally
@@ -22,7 +11,7 @@ Added separate equip slots for armor, clothing and amulets. The default is fully
     
 PS: You can leave a message to adapt the content of other mods. Please try it first and then reply. After replying, please subscribe to this mod or subscribe to the notification in the comment area, otherwise you will not receive reminders. My ability is limited, so add it as appropriate]]
 author = "[Geraint小白、冷逸修、凛子不是林子、xingmot星莫]"
-version = "4.7.3"
+version = "4.7.3.1"
 
 api_version = 10
 

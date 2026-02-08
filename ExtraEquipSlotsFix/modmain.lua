@@ -156,7 +156,6 @@ local items_types = {
 	["armor_lunarplant"]           = EQUIP_TYPES.ARMOR, -- 亮影盔甲
 	["armordreadstone"]            = EQUIP_TYPES.ARMOR, -- 绝望石盔甲
 	["armor_voidcloth"]            = EQUIP_TYPES.ARMOR, -- 暗影长袍
-    ["vagteouqivwx_yus_wmquwe_wkixjd"]       = EQUIP_TYPES.ARMOR, -- 星之卡比 时巡圣羽
     -- ["armorwagpunk"]               = EQUIP_TYPES.ARMOR, -- W.A.R.B.I.S盔甲
 	
 	["armor_medal_obsidian"]       = EQUIP_TYPES.ARMOR, -- 能力勋章
@@ -436,11 +435,7 @@ local items_types = {
     ["orangeamulet"] = EQUIP_TYPES.AMULET, -- 懒人护符
     ["greenamulet"]  = EQUIP_TYPES.AMULET, -- 建造护符
     ["yellowamulet"] = EQUIP_TYPES.AMULET, -- 魔光护符
-
-    
-    ["gary_amulet"]  = EQUIP_TYPES.AMULET, -- 远古护符
 	
-
 	["brooch1"]                  = EQUIP_TYPES.AMULET, -- 伊蕾娜
 	["brooch2"]                  = EQUIP_TYPES.AMULET, -- 伊蕾娜
 	["brooch4"]                  = EQUIP_TYPES.AMULET, -- 伊蕾娜
@@ -552,7 +547,6 @@ AddPrefabPostInitAny(function(inst)
             break
         end
     end
-
     if (eslot ~= nil) and (eslot ~= GLOBAL.EQUIPSLOTS.BODY) then
         -- 分配新装备插槽.
         -- See `scripts/prefabs/*.lua`.
@@ -732,6 +726,47 @@ if EQUIPSLOTS_MAP.AMULET ~= GLOBAL.EQUIPSLOTS.BODY then
         end
     end)
 
+end
+
+require "standardcomponents"
+
+if EQUIP_TYPES.ARMOR ~= GLOBAL.EQUIPSLOTS.BODY then
+    local function MakePunchingbag(name)
+        AddPrefabPostInit(name, function(inst)
+            if not GLOBAL.TheWorld.ismastersim then
+                return
+            end
+    
+            local function new_should_accept_item(inst, item, doer)
+                return item.components.equippable ~= nil
+                and (item.components.equippable.equipslot == GLOBAL.EQUIPSLOTS.HEAD
+                    or item.components.equippable.equipslot == EQUIPSLOTS_MAP.ARMOR),
+                "GENERIC"
+            end
+            inst.components.trader:SetAbleToAcceptTest(new_should_accept_item)
+        end)
+    end
+    MakePunchingbag("punchingbag")
+    MakePunchingbag("punchingbag_lunar")
+    MakePunchingbag("punchingbag_shadow")
+
+    local function MakeRepairableFix(name)
+        AddPrefabPostInit(name, function(inst)
+            if not GLOBAL.TheWorld.ismastersim then
+                return
+            end
+            local old_fn = inst.components.forgerepairable.onrepaired
+            local function NewOnRepaired(inst)
+                old_fn(inst)
+                inst.components.equippable.equipslot = EQUIPSLOTS_MAP.ARMOR
+            end
+            inst.components.forgerepairable:SetOnRepaired(NewOnRepaired)
+        end)
+    end
+
+    MakeRepairableFix("armor_voidcloth")
+    MakeRepairableFix("armor_lunarplant")
+    MakeRepairableFix("armor_lunarplant_husk")
 end
 
 
