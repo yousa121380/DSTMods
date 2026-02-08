@@ -69,18 +69,18 @@ end
 
 -- 2. 将新装备插槽添加到库存栏.
 -- See `scripts/widgets/inventorybar.lua:92`.
-local function get_eslot_image(eslot)
+local function get_eslot_image_key(eslot)
     local types = EQUIPSLOTS_MAP_INVERSE[eslot]
     if mytable.contains_all(types, {'BACKPACK', 'ARMOR'}) then
-        return {ATLAS, "backpack+armor.tex"}
+        return {ATLAS, "backpack+armor.tex", 1}
     elseif table.contains(types, 'BACKPACK') then
-        return {ATLAS, "backpack.tex"}
+        return {ATLAS, "backpack.tex", 1}
     elseif table.contains(types, 'ARMOR') then
-        return {ATLAS, "armor.tex"}
+        return {ATLAS, "armor.tex", 2}
     elseif table.contains(types, 'CLOTHING') then
-        return {ATLAS, "clothing.tex"}
+        return {ATLAS, "clothing.tex", 3}
     elseif table.contains(types, 'AMULET') then
-        return {ATLAS, "amulet.tex"}
+        return {ATLAS, "amulet.tex", 4}
     else
         return {GLOBAL.HUD_ATLAS, "equip_slot_body.tex"}
     end
@@ -96,9 +96,10 @@ AddClassPostConstruct("widgets/inventorybar", function(self)
     -- 更改旧装备插槽的图像.
     for _, info in ipairs(self.equipslotinfo) do
         if info.slot == GLOBAL.EQUIPSLOTS.BODY then
-            local atlas_and_image = get_eslot_image(info.slot)
+            local atlas_and_image = get_eslot_image_key(info.slot)
             info.atlas = atlas_and_image[1]
             info.image = atlas_and_image[2]
+            info.sortkey = 1 + atlas_and_image[3] / 4
         end
     end
 
@@ -106,8 +107,8 @@ AddClassPostConstruct("widgets/inventorybar", function(self)
     local sortkey_start = 1 -- 在第一个插槽之后（“身体”）
     local sortkey_delta = 1 / (#EXTRA_EQUIPSLOTS + 1)
     for i, eslot in ipairs(EXTRA_EQUIPSLOTS) do
-        local atlas_and_image = get_eslot_image(eslot)
-        self:AddEquipSlot(eslot, atlas_and_image[1], atlas_and_image[2], sortkey_start + i * sortkey_delta)
+        local atlas_and_image = get_eslot_image_key(eslot)
+        self:AddEquipSlot(eslot, atlas_and_image[1], atlas_and_image[2], 1 + atlas_and_image[3] / 4)
     end
 
     -- 固定库存条的背景宽度.
@@ -774,6 +775,31 @@ if EQUIP_TYPES.ARMOR ~= GLOBAL.EQUIPSLOTS.BODY then
     -- MakeRepairableFix("armor_medal_space_time")
 end
 
+if EQUIP_TYPES.BACKPACK ~= GLOBAL.EQUIPSLOTS.BODY then
+    AddComponentPostInit("inventory", function(self)
+        function self:GetOverflowContainer()
+            if not GLOBAL.TheWorld.ismastersim then
+                return
+            end
+            if self.ignoreoverflow then
+                return
+            end
+            local item = self:GetEquippedItem(EQUIPSLOTS_MAP.BACKPACK)
+            return (item ~= nil and item.components.container ~= nil and item.components.container.canbeopened)
+                and item.components.container
+                or nil
+        end
+    end)
+    AddPrefabPostInit("inventory_classified", function(self)
+        function self:GetOverflowContainer()
+            if self.ignoreoverflow then
+                return
+            end
+            local item = self:GetEquippedItem(EQUIPSLOTS_MAP.BACKPACK)
+            return item ~= nil and item.replica.container or nil
+        end
+    end)
+end
 
 -- 9. 渲染新装备插槽中的项目.
 if GetModConfigData("config_render") then
