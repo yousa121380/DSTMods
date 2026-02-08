@@ -99,7 +99,7 @@ AddClassPostConstruct("widgets/inventorybar", function(self)
             local atlas_and_image = get_eslot_image_key(info.slot)
             info.atlas = atlas_and_image[1]
             info.image = atlas_and_image[2]
-            info.sortkey = 1 + atlas_and_image[3] / 4
+            info.sortkey = 1 + atlas_and_image[3] / 5
         end
     end
 
@@ -108,7 +108,7 @@ AddClassPostConstruct("widgets/inventorybar", function(self)
     local sortkey_delta = 1 / (#EXTRA_EQUIPSLOTS + 1)
     for i, eslot in ipairs(EXTRA_EQUIPSLOTS) do
         local atlas_and_image = get_eslot_image_key(eslot)
-        self:AddEquipSlot(eslot, atlas_and_image[1], atlas_and_image[2], 1 + atlas_and_image[3] / 4)
+        self:AddEquipSlot(eslot, atlas_and_image[1], atlas_and_image[2], 1 + atlas_and_image[3] / 5)
     end
 
     -- 固定库存条的背景宽度.

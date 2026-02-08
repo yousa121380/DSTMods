@@ -4,7 +4,7 @@ description = isCh and [[四/五/六格装备栏 适配了拳击袋，修复了�
 or 
 [[ Personalized customization，Original mod: 2950481491]]
 author = "[Geraint小白、冷逸修、凛子不是林子、xingmot星莫]"
-version = "4.7.3.3"
+version = "4.7.3.4"
 
 api_version = 10
 
