@@ -162,7 +162,7 @@ local items_types = {
     
     ["armor_medal_obsidian"]       = EQUIP_TYPES.ARMOR, -- 能力勋章
     ["armor_blue_crystal"]         = EQUIP_TYPES.ARMOR, -- 能力勋章
-    ["armor_medal_space_time"]     = EQUIP_TYPES.ARMOR, -- 能力勋章
+    ["armor_medal_space_time"]     = EQUIP_TYPES.BACKPACK, -- 能力勋章
     
     ["golden_armor_mk"]            = EQUIP_TYPES.ARMOR, -- 神话书说
     ["yangjian_armor"]             = EQUIP_TYPES.ARMOR, -- 神话书说
@@ -797,6 +797,35 @@ if EQUIP_TYPES.BACKPACK ~= GLOBAL.EQUIPSLOTS.BODY then
             end
             local item = self:GetEquippedItem(EQUIPSLOTS_MAP.BACKPACK)
             return item ~= nil and item.replica.container or nil
+        end
+        if not GLOBAL.TheWorld.ismastersim then
+            return
+        end
+        local old_fn = self.Has
+        function self:Has(prefab, amount, checkallcontainers)
+            local has, count = old_fn(self, prefab, amount, checkallcontainers)
+            local overflow = self:GetOverflowContainer(inst)
+            if overflow ~= nil then
+                local overflowhas, overflowcount = overflow:Has(prefab, amount, iscrafting)
+                count = count + overflowcount
+            end
+
+            if checkallcontainers then
+                local inventory_replica = inst and inst._parent and inst._parent.replica.inventory
+                local containers = inventory_replica and inventory_replica:GetOpenContainers()
+
+                if containers then
+                    for container_inst in pairs(containers) do
+                        local container = container_inst.replica.container or container_inst.replica.inventory
+                        if container and container ~= overflow and not container.excludefromcrafting and (container.IsReadOnlyContainer == nil or not container:IsReadOnlyContainer()) then
+                            local containerhas, containercount = container:Has(prefab, amount, iscrafting)
+                            count = count + containercount
+                        end
+                    end
+                end
+            end
+
+            return count >= amount, count
         end
     end)
 end
